@@ -1,0 +1,76 @@
+{
+    "create": {
+        "title": "O Último Bastião",
+        "overview": "Após uma pandemia global, um grupo de sobreviventes se refugia em uma base militar abandonada, lutando não apenas contra zumbis, mas também contra as tensões internas e os segredos que podem destruí-los.",
+        "company": "AMC Studios",
+        "release_year": 2022,
+        "featured": true,
+        "cover": "/covers/series/ultimo-bastiao.png",
+        "seasons": 3
+    },
+    "duplicate": {
+        "title": "Invasão Z",
+        "overview": "Uma pequena cidade americana é o epicentro de um surto zumbi misterioso. Um grupo diversificado de sobreviventes se une para descobrir a verdade e buscar segurança.",
+        "company": "Syfy",
+        "release_year": 2021,
+        "featured": false,
+        "cover": "/covers/series/invasao-z.png",
+        "seasons": 2
+    },
+    "to_remove": {
+        "title": "Sobreviventes do Além",
+        "overview": "Num mundo pós-apocalíptico, um grupo de jovens sobreviventes navega pelos perigos de territórios dominados por zumbis, enquanto descobrem novos aspectos sobre si mesmos e a humanidade.",
+        "company": "Netflix",
+        "release_year": 2023,
+        "featured": false,
+        "cover": "/covers/series/sobreviventes-do-alem.png",
+        "seasons": 1
+    },
+    "search": {
+        "input": "zumbi",
+        "outputs": [
+            "Fronteiras Mortais",
+            "A Queda",
+            "Z Nation",
+            "iZombie"
+        ],
+        "data": [
+            {
+                "title": "Fronteiras Mortais",
+                "overview": "Uma equipe de documentaristas viaja pelo mundo durante um apocalipse zumbi para capturar as histórias de sobrevivência e esperança em meio ao caos.",
+                "company": "HBO",
+                "release_year": 2024,
+                "featured": true,
+                "cover": "/caminho/para/fronteiras-mortais.png",
+                "seasons": 2
+            },
+            {
+                "title": "A Queda",
+                "overview": "Após o colapso da civilização devido a uma infestação zumbi, um ex-soldado e uma cientista procuram por um refúgio seguro e a cura para o vírus, enfrentando perigos inimagináveis.",
+                "company": "BBC",
+                "release_year": 2023,
+                "featured": false,
+                "cover": "/caminho/para/a-queda.png",
+                "seasons": 3
+            },
+            {
+                "title": "Z Nation",
+                "overview": "Três anos após um vírus zumbi ter devastado os Estados Unidos, um grupo de sobreviventes transporta o único humano conhecido a ter resistido ao vírus de Nova York para a Califórnia, onde o último laboratório viral funcional espera por seu sangue.",
+                "company": "Syfy",
+                "release_year": 2014,
+                "featured": false,
+                "cover": "/covers/series/z-nation.jpg",
+                "seasons": 5
+            },
+            {
+                "title": "iZombie",
+                "overview": "Uma estudante de medicina transformada em zumbi tenta manter sua humanidade comendo cérebros no necrotério e descobre que tem a capacidade de absorver as memórias dos corpos que ela consome, levando-a a ajudar a resolver casos de homicídio.",
+                "company": "The CW",
+                "release_year": 2015,
+                "featured": false,
+                "cover": "/covers/series/izombie.jpg",
+                "seasons": 5
+            }
+        ]
+    }
+}
