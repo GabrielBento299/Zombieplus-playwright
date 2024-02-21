@@ -59,7 +59,7 @@ export class Api {
     expect(response.ok()).toBeTruthy();
   }
 
-  async postTvsShow(tvsShow) {
+  async postTvShow(tvsShow) {
     const companyId = await this.getCompanyIdByName(tvsShow.company);
 
     const response = await this.request.post(this.baseApi + '/tvshows', {

@@ -9,29 +9,29 @@ test.beforeAll(async () => {
 });
 
 test('deve poder cadastrar uma nova série', async ({ page }) => {
-    const tvsShow = data.create;
+    const tvShow = data.create;
 
     await page.login.do('admin@zombieplus.com', 'pwd123', 'Admin');
-    await page.tvShows.create(tvsShow);
-    await page.popup.haveText(`A série '${tvsShow.title}' foi adicionada ao catálogo.`);
+    await page.tvShows.create(tvShow);
+    await page.popup.haveText(`A série '${tvShow.title}' foi adicionada ao catálogo.`);
 });
 
 test('deve poder remover uma série', async ({ page, request }) => {
-    const tvsShow = data.to_remove;
-    await request.api.postTvsShow(tvsShow);
+    const tvShow = data.to_remove;
+    await request.api.postTvShow(tvShow);
 
     await page.login.do('admin@zombieplus.com', 'pwd123', 'Admin');
     await page.tvShows.goTvShows();
-    await page.tvShows.remove(tvsShow.title);
+    await page.tvShows.remove(tvShow.title);
 });
 
 test('não deve poder cadastrar uma série quando o tiltulo já existe', async ({ page, request }) => {
-    const tvsShow = data.duplicate;
-    await request.api.postTvsShow(tvsShow);
+    const tvShow = data.duplicate;
+    await request.api.postTvShow(tvShow);
 
     await page.login.do('admin@zombieplus.com', 'pwd123', 'Admin');
-    await page.tvShows.create(tvsShow);
-    await page.popup.haveText(` O título '${tvsShow.title}' já consta em nosso catálogo. Por favor, verifique se há necessidade de atualizações ou correções para este item.`);
+    await page.tvShows.create(tvShow);
+    await page.popup.haveText(` O título '${tvShow.title}' já consta em nosso catálogo. Por favor, verifique se há necessidade de atualizações ou correções para este item.`);
 });
 
 test('não deve cadastar quando os campos obrigatórios não são preenchidos', async ({ page }) => {
@@ -49,15 +49,15 @@ test('não deve cadastar quando os campos obrigatórios não são preenchidos', 
 });
 
 test('deve realizar busca pelo termo zumbi', async ({ page, request }) => {
-    const tvsShow = data.search;
+    const tvShow = data.search;
 
-    tvsShow.data.forEach(async (tvsShow) => {
-        await request.api.postTvsShow(tvsShow);
+    tvShow.data.forEach(async (tvShow) => {
+        await request.api.postTvShow(tvShow);
     });
 
     await page.login.do('admin@zombieplus.com', 'pwd123', 'Admin');
 
     await page.tvShows.goTvShows();
-    await page.tvShows.search(tvsShow.input);
-    await page.tvShows.tableHave(tvsShow.outputs);
+    await page.tvShows.search(tvShow.input);
+    await page.tvShows.tableHave(tvShow.outputs);
 });
