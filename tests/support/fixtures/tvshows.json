@@ -27,49 +27,39 @@
         "cover": "/covers/series/sobreviventes-do-alem.png"
     },
     "search": {
-        "input": "zumbi",
+        "input": "zombie",
         "outputs": [
-            "Fronteiras Mortais",
-            "A Queda",
-            "Z Nation",
-            "iZombie"
+            "Zumbis em Guerra",
+            "Zumbilândia: A Série",
+            "Escola de Zumbis"
         ],
         "data": [
             {
-                "title": "Fronteiras Mortais",
-                "overview": "Uma equipe de documentaristas viaja pelo mundo durante um apocalipse zumbi para capturar as histórias de sobrevivência e esperança em meio ao caos.",
-                "company": "Netflix",
-                "release_year": 2024,
-                "featured": true,
-                "seasons": "2",
-                "cover": "/caminho/para/fronteiras-mortais.png"
+              "title": "Zumbis em Guerra",
+              "overview": "Num mundo pós-apocalíptico, dois grupos de sobreviventes lutam pela supremacia enquanto enfrentam ameaças de zumbis e traições internas.",
+              "company": "Netflix",
+              "release_year": 2021,
+              "featured": false,
+              "seasons": "1",
+              "cover": "/caminho/para/zumbis-em-guerra.png"
             },
             {
-                "title": "A Queda",
-                "overview": "Após o colapso da civilização devido a uma infestação zumbi, um ex-soldado e uma cientista procuram por um refúgio seguro e a cura para o vírus, enfrentando perigos inimagináveis.",
-                "company": "Netflix",
-                "release_year": 2023,
-                "featured": false,
-                "seasons": "3",
-                "cover": "/caminho/para/a-queda.png"
+              "title": "Zumbilândia: A Série",
+              "overview": "Baseada no filme de sucesso, segue as aventuras cômicas de quatro sobreviventes tentando encontrar um lugar seguro longe dos zumbis.",
+              "company": "Netflix",
+              "release_year": 2013,
+              "featured": false,
+              "seasons": "1",
+              "cover": "/caminho/para/zumbilandia-a-serie.png"
             },
             {
-                "title": "Z Nation",
-                "overview": "Três anos após um vírus zumbi ter devastado os Estados Unidos, um grupo de sobreviventes transporta o único humano conhecido a ter resistido ao vírus de Nova York para a Califórnia, onde o último laboratório viral funcional espera por seu sangue.",
-                "company": "Netflix",
-                "release_year": 2014,
-                "featured": false,
-                "seasons": "5",
-                "cover": "/covers/series/z-nation.jpg"
-            },
-            {
-                "title": "iZombie",
-                "overview": "Uma estudante de medicina transformada em zumbi tenta manter sua humanidade comendo cérebros no necrotério e descobre que tem a capacidade de absorver as memórias dos corpos que ela consome, levando-a a ajudar a resolver casos de homicídio.",
-                "company": "Netflix",
-                "release_year": 2015,
-                "featured": false,
-                "seasons": "5",
-                "cover": "/covers/series/izombie.jpg"
+              "title": "Escola de Zumbis",
+              "overview": "Em um futuro onde zumbis e humanos coexistem, uma escola especial ensina jovens zumbis a se integrarem na sociedade.",
+              "company": "Netflix",
+              "release_year": 2022,
+              "featured": true,
+              "seasons": "2",
+              "cover": "/caminho/para/escola-de-zumbis.png"
             }
         ]
     }
