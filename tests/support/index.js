@@ -3,7 +3,7 @@ const { test: base, expect } = require('@playwright/test');
 const { Leads } = require('./actions/Leads');
 const { Login } = require('./actions/Login');
 const { Movies } = require('./actions/Movies');
-const { TvsShows } = require('./actions/TvsShows');
+const { TvShows } = require('./actions/TvShows');
 const { Popup } = require('./actions/Components');
 
 const { Api } = require('./api');
@@ -16,7 +16,7 @@ const test = base.extend({
         context['leads'] = new Leads(page);
         context['login'] = new Login(page);
         context['movies'] = new Movies(page);
-        context['tvsShows'] = new TvsShows(page);
+        context['tvShows'] = new TvShows(page);
         context['popup'] = new Popup(page);
 
         await use(page);
