@@ -6,10 +6,11 @@ const { faker } = require('@faker-js/faker');
 
 const { executeSQL } = require('../support/database');
 
+let baseApi = process.env.BASE_API;
+
 test.beforeAll( async () => {
   await executeSQL(`DELETE FROM leads`);
 });
-
 
 test('deve cadastrar um lead na fila de espera', async ({ page }) => {
   const leadName = faker.person.fullName();
@@ -27,7 +28,7 @@ test('nao deve cadastrar quando um email já existe', async ({ page, request }) 
   const leadName = faker.person.fullName();
   const leadEmail = faker.internet.email();
 
-  const newLead = await request.post(this.baseApi + '/leads', { 
+  const newLead = await request.post(baseApi + '/leads', { 
     data: {
       name: leadName,
       email: leadEmail
