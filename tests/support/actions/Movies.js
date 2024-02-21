@@ -19,18 +19,16 @@ export class Movies {
     await this.page.getByLabel('Titulo do filme').fill(movie.title);
     await this.page.getByLabel('Sinopse').fill(movie.overview);
 
-    await this.page.locator('#select_company_id').click();
+    await this.page.locator('div[id="select_company_id"]').click();
+    await this.page.locator('div[class*="react-select__option"]').filter({ hasText: movie.company }).click();
 
-    await this.page.locator('.react-select__option').filter({ hasText: movie.company }).click();
-
-    await this.page.locator('#select_year').click();
-
-    await this.page.locator('.react-select__option').filter({ hasText: movie.release_year }).click();
+    await this.page.locator('div[id="select_year"]').click();
+    await this.page.locator('div[class*="react-select__option"]').filter({ hasText: movie.release_year }).click();
 
     await this.page.locator('input[name="cover"]').setInputFiles('tests/support/fixtures' + movie.cover);
 
     if (movie.featured) {
-      await this.page.locator('.featured .react-switch').click();
+      await this.page.locator('label[class*="featured"] div[class="react-switch"]').click();
     }
 
     await this.submit();
@@ -38,7 +36,6 @@ export class Movies {
 
   async search(target) {
     await this.page.getByPlaceholder('Busque pelo nome').fill(target);
-
     await this.page.click('.actions button');
   }
 
@@ -53,7 +50,6 @@ export class Movies {
 
   async remove(title) {
     await this.page.getByRole('row', { name: title }).getByRole('button').click();
-
     await this.page.click('.confirm-removal');
   }
 }
