@@ -25,11 +25,9 @@ export class TvShows {
         await this.page.getByLabel('Sinopse').fill(tvsShow.overview);
     
         await this.page.locator('div[id="select_company_id"]').click();
-    
         await this.page.locator('div[class*="react-select__option"]').filter({ hasText: tvsShow.company }).click();
     
         await this.page.locator('div[id="select_year"]').click();
-    
         await this.page.locator('div[class*="react-select__option"]').filter({ hasText: tvsShow.release_year }).click();
 
         await this.page.locator('input[id="seasons"]').fill(tvsShow.seasons);
@@ -45,7 +43,6 @@ export class TvShows {
 
     async search(target) {
         await this.page.getByPlaceholder('Busque pelo nome').fill(target);
-    
         await this.page.click('.actions button');
     }
 
