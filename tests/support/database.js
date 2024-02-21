@@ -1,11 +1,13 @@
+require('dotenv').config();
+
 const { Pool } = require('pg');
 
 const dbConfig = {
-    user: 'dqpuvkvc',
-    host: 'kashin.db.elephantsql.com',
-    database: 'dqpuvkvc',
-    password: 'evZDrjDUjrE9BP9thtyz6lD0RLFxU4ht',
-    port: 5432
+    user: process.env.DB_USER,
+    host: process.env.DB_HOST,
+    database: process.env.DB_DB_NAME,
+    password: process.env.DB_PASSWORD,
+    port: process.env.DB_PORT
 }
 
 export async function executeSQL(sqlScript) {
@@ -14,8 +16,7 @@ export async function executeSQL(sqlScript) {
         const cliente = await pool.connect();
 
         const result = await cliente.query(sqlScript);
-        console.log('Deu certo', result.rows);
     } catch (err) {
-        console.log('Erro ao executar SQL', err);
+        throw new Error(err.message);
     }
 }
