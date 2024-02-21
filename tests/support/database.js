@@ -17,6 +17,5 @@ export async function executeSQL(sqlScript) {
 
         const result = await cliente.query(sqlScript);
     } catch (err) {
-        throw new Error(err.message);
     }
 }
