@@ -6,7 +6,7 @@ export class TvShows {
     }
 
     async goTvShows() {
-        await this.page.locator('a[href="/admin/tvshows"]').click();
+        await this.page.locator('a[href$="tvshows"]').click();
     }
 
     async goForm() {
