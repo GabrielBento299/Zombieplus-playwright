@@ -1,5 +1,7 @@
 const { test, expect } = require('../support');
 
+require('dotenv').config();
+
 const { faker } = require('@faker-js/faker');
 
 const { executeSQL } = require('../support/database');
@@ -25,7 +27,7 @@ test('nao deve cadastrar quando um email já existe', async ({ page, request }) 
   const leadName = faker.person.fullName();
   const leadEmail = faker.internet.email();
 
-  const newLead = await request.post('http://localhost:3333/leads', { 
+  const newLead = await request.post(this.baseApi + '/leads', { 
     data: {
       name: leadName,
       email: leadEmail
