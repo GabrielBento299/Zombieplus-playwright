@@ -23,7 +23,6 @@ export class Login {
     await this.page.getByPlaceholder('Senha').fill(password);
 
     await this.page.locator('//button[text()="Entrar"]').click();
-    // await this.page.getByText('Entrar').click();
   }
 
   async alertHaveText(text) {
